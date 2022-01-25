@@ -1,0 +1,98 @@
+.scroll-container {
+  width: 80%;
+}
+
+.gridscroll {
+  display: flex;
+  overflow: auto;
+  padding: 0.9rem 0;
+}
+
+.profile {
+  background: #fff;
+  border: 2px solid #fff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  margin: 0 0.5rem;
+  padding: 0 0 0.4rem 0;
+  text-align: center;
+}
+
+.movie--details {
+  margin: 0.6rem 0.5rem;
+}
+
+.text--black-sm {
+  color: #000;
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-top: 0.8rem;
+}
+
+.text--white--normal {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #fff;
+  margin: 0.4rem 0;
+}
+
+.details li {
+  font-size: 0.9rem;
+  font-weight: normal;
+  display: block;
+}
+
+.profile img {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  width: 140px;
+  height: 170px;
+}
+
+.recommendation {
+  margin: 0 0.8rem;
+}
+
+.recommendation img {
+  border-radius: 10px;
+}
+
+.original__title {
+  color: #fff;
+  font-size: 0.8rem;
+}
+
+.gridscroll::-webkit-scrollbar {
+  width: 10px;
+  height: 5px;
+}
+
+.gridscroll::-webkit-scrollbar-track {
+  border-radius: 5px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+.gridscroll::-webkit-scrollbar-thumb {
+  background-color: darkgray;
+  border-radius: 10px;
+}
+
+@media (max-width: 780px) {
+  .scroll-container {
+    width: 100%;
+  }
+  .gridscroll {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    width: auto;
+  }
+
+  .col--2 {
+    flex-direction: column;
+  }
+
+  .movie--details ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

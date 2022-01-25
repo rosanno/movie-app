@@ -1,0 +1,126 @@
+nav {
+  position: relative;
+}
+
+a.web--logo {
+  font-size: 1.7rem;
+}
+
+.mobile--logo {
+  display: none;
+}
+
+.mobile--btn,
+.fa-close {
+  display: none;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+li {
+  position: relative;
+}
+
+.link:before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  width: 0;
+  height: 3px;
+  background: crimson;
+  transition: 0.3s;
+}
+
+.link:hover:before {
+  width: 100%;
+}
+
+@media (max-width: 780px) {
+  .fa-close {
+    display: block;
+    color: white;
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    font-size: 1.6rem;
+  }
+
+  .mobile--logo {
+    display: block;
+  }
+
+  .web--logo {
+    display: none;
+  }
+
+  .mobile--logo {
+    position: fixed;
+    right: 20px;
+    top: 7px;
+    z-index: 999;
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+
+  .mobile--btn {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0.5rem 1.1rem;
+    background: rgba(0, 0, 0, 0.9);
+    font-size: 1.4rem;
+    z-index: 999;
+  }
+
+  .fa-bars {
+    color: white;
+  }
+
+  .mobile--btn:hover {
+    cursor: pointer;
+  }
+
+  .fa-close:hover {
+    cursor: pointer;
+  }
+
+  .navigation {
+    flex-direction: column;
+    background: #000;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 999;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: 350ms;
+  }
+
+  .navigation.active {
+    left: 0;
+    transition: 350ms;
+  }
+
+  li {
+    display: inline;
+  }
+
+  li a {
+    margin: 0.9rem 0;
+    font-size: 1.2rem;
+  }
+}
